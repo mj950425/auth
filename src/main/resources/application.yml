@@ -6,3 +6,23 @@ jwt:
   expires_in: 300 # 5 minutes
   mobile_expires_in: 600 # 10 minutes
   secret: queenvictoria
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.Oracle10gDialect
+
+  datasource:
+    url: jdbc:tibero:thin:@tmaxwork.iptime.org:8629:tibero
+    driver-class-name: com.tmax.tibero.jdbc.TbDriver
+    username: test
+    password: test
+  database-platform: org.hibernate.dialect.Oracle10gDialect
+
+
+

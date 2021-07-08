@@ -29,10 +29,10 @@ dependencies {
     implementation 'org.webjars.bower:angular-route:1.5.9'
     implementation 'org.webjars:bootstrap:3.3.7'
     implementation 'org.webjars:jquery:2.1.1'
-    runtimeOnly 'com.h2database:h2:1.4.200'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.4.4'
     testImplementation 'org.springframework.security:spring-security-test:5.4.5'
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.1'
+    implementation files('libs/tibero/tibero6-jdbc.jar')
 }
 
 group = 'com.example'
