@@ -11,18 +11,22 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.Oracle10gDialect
+        jdbc:
+          batch-size: 32
 
   datasource:
-    url: jdbc:tibero:thin:@tmaxwork.iptime.org:8629:tibero
+    url: jdbc:tibero:thin:@192.168.153.148:tibero
     driver-class-name: com.tmax.tibero.jdbc.TbDriver
     username: test
     password: test
+    sql-script-encoding: utf-8
   database-platform: org.hibernate.dialect.Oracle10gDialect
+
 
 
 
